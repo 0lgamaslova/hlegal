@@ -11,5 +11,9 @@
 		<path d="M7 7L25 25" stroke="#EC6F5D" stroke-width="2"/>
 		<path d="M25 7L7 25" stroke="#EC6F5D" stroke-width="2"/>
 	</symbol>
-
 </svg>
+
+
+<!-- <svg>
+	<use xlink:href="/src/img/sprites.svg#facebook"></use>
+</svg> -->
