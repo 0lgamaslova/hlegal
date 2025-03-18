@@ -1,3 +1,10 @@
+// js
+import Swiper from "swiper";
+import { Pagination } from "swiper/modules";
+
+// styles
+import "swiper/css";
+import "swiper/css/pagination";
 import "../scss/style.scss";
 
 (function () {
@@ -52,3 +59,16 @@ import "../scss/style.scss";
     });
   });
 })();
+
+const swiper = new Swiper(".swiper", {
+  modules: [Pagination],
+  // If we need pagination
+  pagination: {
+    el: ".swiper-pagination",
+  },
+
+  // And if we need scrollbar
+  scrollbar: {
+    el: ".swiper-scrollbar",
+  },
+});

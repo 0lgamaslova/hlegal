@@ -1,47 +1,98 @@
 body {
-	font: 16px/1.63 'Montserrat', sans-serif;
+  font: 16px/1.63 "Montserrat", sans-serif;
 }
 
 a {
-	color:  $regular-color;
-	text-decoration: none;
-	&:hover {
-		color: $accent-color;
-	}
+  color: $regular-color;
+  text-decoration: none;
+  &:hover {
+    color: $accent-color;
+  }
+}
+
+h2 {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+h3 {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+h4 {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.gradient-text {
+  @include text-grad;
 }
 
 .d-none {
-	display: none;
+  display: none;
 }
 
 .d-sm-block {
-	@media screen and (min-width:  $breakpoint-md) {
-		display: block;
-	}
+  @media screen and (min-width: $breakpoint-md) {
+    display: block;
+  }
 }
 
 .d-md-block {
-	@media (min-width: $breakpoint-lg) {
-			display: block;
-	}
+  @media (min-width: $breakpoint-lg) {
+    display: block;
+  }
 }
 
 .wrapper {
-	min-height: 100vh;
-	min-width: 375px;
-	position: relative;
-	overflow: hidden;
+  min-height: 100vh;
+  min-width: 375px;
+  position: relative;
+  overflow: hidden;
 }
 
 .container {
-	max-width: 1720px;
-	margin: 0 auto;
-	padding: 0 30px;
+  max-width: 1720px;
+  margin: 0 auto;
+  padding: 0 30px;
+
+  @media screen and (min-width: $breakpoint-md) {
+    padding: 0 60px;
+  }
 }
 
 .bg-box {
-	color: $basic-white;
-	background: linear-gradient(228.57deg, #323264 11.93%, #323264 57.17%, #643E72 87.46%);
+  color: $basic-white;
+  margin-bottom: 60px;
+  background: linear-gradient(
+    228.57deg,
+    #323264 11.93%,
+    #323264 57.17%,
+    #643e72 87.46%
+  );
 }
 
+.cat-link {
+  color: $regular-color;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 700;
 
+  &:after {
+    content: "";
+    width: 9px;
+    height: 9px;
+    border-color: inherit;
+    border-width: 3px 3px 0 0;
+    border-style: solid;
+    display: inline-block;
+    transform: rotate(45deg);
+    margin-left: 2px;
+  }
+
+  &:hover {
+    color: $accent-color;
+  }
+}
