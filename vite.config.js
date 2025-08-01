@@ -10,6 +10,9 @@ import { ViteImageOptimizer } from 'vite-plugin-image-optimizer';
 const rootPath = '/hlegal/'
 // example: const rootPath = '/my-path/'
 
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = path.dirname(__filename)
+
 export default defineConfig({
 	css: {
 		preprocessorOptions: {
